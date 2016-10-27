@@ -1,0 +1,23 @@
+{{!< default}}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+<div id="main" role="main" class="container">
+      <article class="post">
+  <h2>{{title}}</h1>
+  <div class="entry">
+	<span class="post-image">
+	</span>
+
+            {{content}}
+  </div>
+  <div class="date">
+  <p>  Written on {{date format="DD MMMM YYYY"}}</p>
+  </div>
+{{> "relate"}}  
+{{> "share"}}  
+ <div class="tag"> {{tags separator=" " prefix="Read more on "}}</div>
+</article>
+
+    </div>
+{{/post}}
